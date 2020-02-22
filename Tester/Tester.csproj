@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>DrBAE.Congress.Tester</AssemblyName>
+    <RootNamespace>DrBAE.Congress.Tester</RootNamespace>
+    <Nullable>enable</Nullable>
+    <LangVersion>8.0</LangVersion>
+    <WarningsAsErrors>CS8600;CS8602;CS8603;CS8625;CS8604</WarningsAsErrors>
+  </PropertyGroup>
+
+</Project>

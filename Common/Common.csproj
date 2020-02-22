@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <Nullable>enable</Nullable>
+    <LangVersion>8.0</LangVersion>
+    <WarningsAsErrors>CS8600;CS8602;CS8603;CS8625;CS8604</WarningsAsErrors>
+    <AssemblyName>DrBAE.Congress.Common</AssemblyName>
+    <RootNamespace>DrBAE.Congress.Common</RootNamespace>
+  </PropertyGroup>
+
+</Project>
