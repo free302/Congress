@@ -4,7 +4,8 @@ using System.Text;
 
 namespace DrBAE.Congress.Common
 {
-    interface IDriver
+    public interface IDriver
     {
+        Vote[] GetVoteData();
     }
 }

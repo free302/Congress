@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,12 +8,14 @@ using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using DrBAE.Congress.Common;
+using System.Net.Http;
+using System.Net;
+using System.Net.Http.Headers;
 
 namespace DrBAE.Congress.Server.Controllers
 {
     [Route("[controller]")]
-    [ApiController]
-    public class VoteController : ControllerBase
+    public class VoteUtfController : ControllerBase
     {
         private static readonly (int, decimal rate, decimal seat)[] _sample = new[]
         {
@@ -24,45 +25,27 @@ namespace DrBAE.Congress.Server.Controllers
             (int.MaxValue, 9.9m,0)
         };
 
-        private readonly ILogger<VoteController> _logger;
-        public VoteController(ILogger<VoteController> logger) => _logger = logger;
+        private readonly ILogger<VoteUtfController> _logger;
+        public VoteUtfController(ILogger<VoteUtfController> logger) => _logger = logger;
 
         // GET: api/Vote
         [HttpGet]
-        public string Get()
+        public HttpResponseMessage Get()
         {
             var list = new Vote[_sample.Length];
             for (int i = 0; i < _sample.Length - 1; i++) list[i] = new Vote(i, _sample[i].rate, _sample[i].seat);
             list[^1] = new Vote(int.MaxValue, _sample[^1].rate, _sample[^1].seat);
-                       
+
             var opt = new JsonSerializerOptions() { WriteIndented = true };
-            return JsonSerializer.Serialize(list, opt);
+
+            HttpResponseMessage result = new HttpResponseMessage(HttpStatusCode.OK);
+            result.Content = new ByteArrayContent(JsonSerializer.SerializeToUtf8Bytes(list));
+            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
+            return result;
+
+            //return JsonSerializer.Serialize(list, opt);
             //return JsonSerializer.SerializeToUtf8Bytes(list);
         }
 
-        // GET: api/Vote/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Vote
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Vote/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
