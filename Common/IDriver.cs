@@ -6,6 +6,7 @@ namespace DrBAE.Congress.Common
 {
     public interface IDriver
     {
-        Vote[] GetVoteData();
+        Vote[] GetVoteData(bool fromServer);
+        Party[] GetPartyData(bool fromServer);
     }
 }

@@ -12,10 +12,10 @@ namespace UTester
     public class DriverTester
     {
         [Fact]
-        void run()
+        public void run()
         {
             var driver = new DriverLogic();
-            var votes = driver.GetVoteData();
+            var votes = driver.GetVoteData(true);
 
 
         }

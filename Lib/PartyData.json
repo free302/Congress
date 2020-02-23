@@ -1,0 +1,43 @@
+[
+  {
+    "Id": 0,
+    "Name": "\uBB34\uC18C\uC18D"
+  },
+  {
+    "Id": 1,
+    "Name": "\uB354\uBD88\uC5B4\uBBFC\uC8FC\uB2F9"
+  },
+  {
+    "Id": 2,
+    "Name": "\uBBF8\uB798\uD1B5\uD569\uB2F9"
+  },
+  {
+    "Id": 3,
+    "Name": "\uBBFC\uC8FC\uD1B5\uD569\uB2F9"
+  },
+  {
+    "Id": 4,
+    "Name": "\uC815\uC758\uB2F9"
+  },
+  {
+    "Id": 5,
+    "Name": "\uAD6D\uBBFC\uC758\uB2F9"
+  },
+  {
+    "Id": 6,
+    "Name": "\uC6B0\uB9AC\uACF5\uD654\uB2F9"
+  },
+  {
+    "Id": 7,
+    "Name": "\uBBFC\uC911\uB2F9",
+    "NumDistrictSeat": 0
+  },
+  {
+    "Id": 8,
+    "Name": "\uCE5C\uBC15\uC2E0\uB2F9"
+  },
+  {
+    "Id": 99,
+    "Name": "\uAE30\uD0C0"
+  }
+]

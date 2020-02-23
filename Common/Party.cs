@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DrBAE.Congress.Logic
+namespace DrBAE.Congress.Common
 {
     /// <summary>
     /// 정당
     /// </summary>
     public class Party
     {
+        public Party() { }
         public Party(int id, string name)
         {
             Id = id;
             Name = name;
         }
+        public Party((int id, string name) v) : this(v.id, v.name) { }
+
         public int Id { get; set; }
         public string Name { get; set; } = "";
         public decimal NumDistrictSeat { get; set; }//지역구 의석수
@@ -26,7 +29,7 @@ namespace DrBAE.Congress.Logic
         /// <summary>
         /// 지역구 없는 정당 총합 - 득표율 != 0, 비례좌석 0
         /// </summary>
-        public static Party EtcParty = new Party(int.MaxValue, "기타정당")
+        public static Party EtcParty = new Party(99, "기타")
         { CanHaveVoteRate = true, CanHavePropSeat = false };
 
         /// <summary>
@@ -34,5 +37,7 @@ namespace DrBAE.Congress.Logic
         /// </summary>
         public static Party IndiParty = new Party(0, "무소속")//무소속
         { CanHaveVoteRate = false, CanHavePropSeat = false };
+
+        public override string ToString() => $"{Id}:{Name}";
     }
 }

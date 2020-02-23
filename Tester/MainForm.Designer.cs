@@ -1,4 +1,6 @@
-﻿namespace DrBAE.Congress.Tester
+﻿using System.Windows.Forms;
+
+namespace DrBAE.Congress.Tester
 {
     partial class MainForm
     {
@@ -32,9 +34,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "MainForm";
+            this.Font = new System.Drawing.Font("Noto Sans CJK", 12);
 
-
+            Controls.Add(uiLog = new RichTextBox());
+            uiLog.Dock = DockStyle.Fill;
+            uiLog.Font = new System.Drawing.Font("Consolas", 12);
         }
+
+        RichTextBox uiLog;
 
         #endregion
     }

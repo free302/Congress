@@ -15,16 +15,16 @@ namespace DrBAE.Congress.Server.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class VoteController : ControllerBase
+    public class PartyController : ControllerBase
     {
-        private readonly ILogger<VoteController> _logger;
-        public VoteController(ILogger<VoteController> logger) => _logger = logger;
+        private readonly ILogger<PartyController> _logger;
+        public PartyController(ILogger<PartyController> logger) => _logger = logger;
 
         // GET: api/Vote
         [HttpGet]
         public IActionResult Get()
         {
-            var list = DataLoader.LoadVote();
+            var list = DataLoader.LoadParty();
             var bytes = JsonSerializer.SerializeToUtf8Bytes(list);
             return new FileContentResult(bytes, "application/octet-stream");
         }
@@ -33,7 +33,7 @@ namespace DrBAE.Congress.Server.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            var list = DataLoader.LoadVote();
+            var list = DataLoader.LoadParty();
             return JsonSerializer.Serialize(list, new JsonSerializerOptions() { WriteIndented = true });
         }
 

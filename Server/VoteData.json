@@ -1,0 +1,57 @@
+[
+  {
+    "Id": 0,
+    "NumDistrictSeat": 20,
+    "PropVoteRate": 0
+  },
+  {
+    "Id": 1,
+    "NumDistrictSeat": 116,
+    "PropVoteRate": 40.40
+  },
+  {
+    "Id": 2,
+    "NumDistrictSeat": 91,
+    "PropVoteRate": 32.10
+  },
+  {
+    "Id": 3,
+    "NumDistrictSeat": 7,
+    "PropVoteRate": 4.10
+  },
+  {
+    "Id": 4,
+    "NumDistrictSeat": 8,
+    "PropVoteRate": 3.80
+  },
+  {
+    "Id": 5,
+    "NumDistrictSeat": 2,
+    "PropVoteRate": 4.40
+  },
+  {
+    "Id": 6,
+    "NumDistrictSeat": 2,
+    "PropVoteRate": 1.70
+  },
+  {
+    "Id": 7,
+    "NumDistrictSeat": 3,
+    "PropVoteRate": 1.10
+  },
+  {
+    "Id": 8,
+    "NumDistrictSeat": 1,
+    "PropVoteRate": 1.0
+  },
+  {
+    "Id": 9,
+    "NumDistrictSeat": 3,
+    "PropVoteRate": 1.5
+  },
+  {
+    "Id": 2147483647,
+    "NumDistrictSeat": 0,
+    "PropVoteRate": 9.9
+  }
+]
