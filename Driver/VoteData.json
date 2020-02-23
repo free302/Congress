@@ -1,10 +1,5 @@
 [
   {
-    "Id": 0,
-    "NumDistrictSeat": 20,
-    "PropVoteRate": 0
-  },
-  {
     "Id": 1,
     "NumDistrictSeat": 116,
     "PropVoteRate": 40.40
@@ -42,16 +37,21 @@
   {
     "Id": 8,
     "NumDistrictSeat": 1,
-    "PropVoteRate": 1.0
+    "PropVoteRate": 1.00
   },
   {
     "Id": 9,
     "NumDistrictSeat": 3,
-    "PropVoteRate": 1.5
+    "PropVoteRate": 1.50
   },
   {
-    "Id": 2147483647,
+    "Id": 98,
     "NumDistrictSeat": 0,
-    "PropVoteRate": 9.9
-  }
+    "PropVoteRate": 9.90
+  },
+  {
+    "Id": 99,
+    "NumDistrictSeat": 20,
+    "PropVoteRate": 0
+  }  
 ]

@@ -12,6 +12,8 @@ namespace DrBAE.Congress.Tester
 {
     public partial class MainForm : Form
     {
+        static bool _UseServer = false;
+
         public MainForm()
         {
             InitializeComponent();
@@ -28,12 +30,12 @@ namespace DrBAE.Congress.Tester
             var driver = new DriverLogic();
 
             log("--- 정당 목록 ----");
-            var parties = driver.GetPartyData(true);
+            var parties = driver.GetPartyData(_UseServer);
             Array.ForEach(parties, x => log(x));
 
             log("--- 투표 결과 ----");
-            var votes = driver.GetVoteData(true);
-            Array.ForEach(votes, x => log(x));
+            var votes = driver.GetVoteData(_UseServer);
+            Array.ForEach(votes, x => log(x.ToString().Replace(":","\t\t")));
         }
 
     }

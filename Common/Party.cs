@@ -29,13 +29,13 @@ namespace DrBAE.Congress.Common
         /// <summary>
         /// 지역구 없는 정당 총합 - 득표율 != 0, 비례좌석 0
         /// </summary>
-        public static Party EtcParty = new Party(99, "기타")
+        public static Party EtcParty = new Party(98, "기타")
         { CanHaveVoteRate = true, CanHavePropSeat = false };
 
         /// <summary>
         /// 무소속 - 득표율 0, 비례좌석 0
         /// </summary>
-        public static Party IndiParty = new Party(0, "무소속")//무소속
+        public static Party IndiParty = new Party(99, "무소속")//무소속
         { CanHaveVoteRate = false, CanHavePropSeat = false };
 
         public override string ToString() => $"{Id}:{Name}";

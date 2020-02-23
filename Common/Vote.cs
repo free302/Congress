@@ -21,7 +21,7 @@ namespace DrBAE.Congress.Common
 
         public override string ToString() => Pack();
 
-        public string Pack() => $"{Id}:{NumDistrictSeat}:{PropVoteRate}";
+        public string Pack() => $"{Id}:{PropVoteRate}:{NumDistrictSeat}";
         public static Vote Parse(string packed)
         {
             var values = packed.Split(':').Select(x => decimal.Parse(x)).ToArray();

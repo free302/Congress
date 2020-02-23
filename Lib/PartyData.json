@@ -1,43 +1,43 @@
 [
   {
-    "Id": 0,
-    "Name": "\uBB34\uC18C\uC18D"
-  },
-  {
     "Id": 1,
-    "Name": "\uB354\uBD88\uC5B4\uBBFC\uC8FC\uB2F9"
+    "Name": "더불어민주당"
   },
   {
     "Id": 2,
-    "Name": "\uBBF8\uB798\uD1B5\uD569\uB2F9"
+    "Name": "미래통합당"
   },
   {
     "Id": 3,
-    "Name": "\uBBFC\uC8FC\uD1B5\uD569\uB2F9"
+    "Name": "민주통합당"
   },
   {
     "Id": 4,
-    "Name": "\uC815\uC758\uB2F9"
+    "Name": "정의당"
   },
   {
     "Id": 5,
-    "Name": "\uAD6D\uBBFC\uC758\uB2F9"
+    "Name": "국민의당"
   },
   {
     "Id": 6,
-    "Name": "\uC6B0\uB9AC\uACF5\uD654\uB2F9"
+    "Name": "우리공화당"
   },
   {
     "Id": 7,
-    "Name": "\uBBFC\uC911\uB2F9",
+    "Name": "민중당",
     "NumDistrictSeat": 0
   },
   {
     "Id": 8,
-    "Name": "\uCE5C\uBC15\uC2E0\uB2F9"
+    "Name": "친박신당"
+  },
+  {
+    "Id": 98,
+    "Name": "기타"
   },
   {
     "Id": 99,
-    "Name": "\uAE30\uD0C0"
+    "Name": "무소속"
   }
 ]

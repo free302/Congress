@@ -8,5 +8,10 @@ namespace DrBAE.Congress.Common
     {
         Vote[] GetVoteData(bool fromServer);
         Party[] GetPartyData(bool fromServer);
+
+
+        void SaveParty(Party[] paties, bool toServer = false);
+        void SaveVote(Vote[] paties, bool toServer = false);
+
     }
 }

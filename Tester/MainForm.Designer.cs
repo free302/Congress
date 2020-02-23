@@ -32,9 +32,9 @@ namespace DrBAE.Congress.Tester
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 800);
             this.Text = "MainForm";
-            this.Font = new System.Drawing.Font("Noto Sans CJK", 12);
+            this.Font = new System.Drawing.Font("Noto Sans KR", 12);
 
             Controls.Add(uiLog = new RichTextBox());
             uiLog.Dock = DockStyle.Fill;

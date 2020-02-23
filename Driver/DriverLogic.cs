@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
@@ -10,19 +11,29 @@ using DrBAE.Congress.Common;
 
 namespace DrBAE.Congress.Driver
 {
-    public class DriverLogic : IDriver
+    public partial class DriverLogic : IDriver
     {
+        const string _partyFile = "PartyData.json";
+        const string _partyUrl = "https://localhost:44318/party";
+
         public Party[] GetPartyData(bool fromServer) => fromServer ? loadPartyFromWeb() : loadPartyFromFile();
+
         Party[] loadPartyFromFile()
         {
-            const string voteFile = "PartyData.json";
-            return JsonSerializer.Deserialize<Party[]>(File.ReadAllText(voteFile));
+            try
+            {
+                return JsonSerializer.Deserialize<Party[]>(File.ReadAllText(_partyFile));
+            }
+            catch
+            {
+                return new Party[0];
+            }
         }
+
         Party[] loadPartyFromWeb()
         {
-            const string voteUrl = "https://localhost:44318/party";
             var client = new HttpClient();
-            var response = client.GetAsync(voteUrl, HttpCompletionOption.ResponseContentRead).Result;
+            var response = client.GetAsync(_partyUrl, HttpCompletionOption.ResponseContentRead).Result;
             if (response.IsSuccessStatusCode)
             {
                 var bytes = response.Content.ReadAsByteArrayAsync().Result;
@@ -31,12 +42,14 @@ namespace DrBAE.Congress.Driver
             else return new Party[0];
         }
 
+        const string _voteFile = "VoteData.json";
+        const string _voteUrl = "https://localhost:44318/vote";
+
         public Vote[] GetVoteData(bool fromServer) => fromServer ? loadVoteFromWeb() : loadVoteFromFile();        
         Vote[] loadVoteFromWeb()
         {
-            const string voteUrl = "https://localhost:44318/vote";
             var client = new HttpClient();
-            var response = client.GetAsync(voteUrl, HttpCompletionOption.ResponseContentRead).Result;
+            var response = client.GetAsync(_voteUrl, HttpCompletionOption.ResponseContentRead).Result;
             if (response.IsSuccessStatusCode)
             {
                 var bytes = response.Content.ReadAsByteArrayAsync().Result;
@@ -44,10 +57,6 @@ namespace DrBAE.Congress.Driver
             }
             else return new Vote[0];
         }
-        Vote[] loadVoteFromFile()
-        {
-            const string voteFile = "VoteData.json";
-            return JsonSerializer.Deserialize<Vote[]>(File.ReadAllText(voteFile));
-        }        
+        Vote[] loadVoteFromFile() => JsonSerializer.Deserialize<Vote[]>(File.ReadAllText(_voteFile));
     }
 }
