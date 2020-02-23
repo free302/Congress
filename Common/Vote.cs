@@ -11,20 +11,20 @@ namespace DrBAE.Congress.Common
         public Vote(int id, decimal rate, decimal seat)
         {
             Id = id;
-            PropVoteRate = rate;
-            NumDistrictSeat = seat;
+            PartyVoteRate = rate;
+            DistrictSeat = seat;
         }
         public Vote((int id, decimal rate, decimal seat) v) : this(v.id, v.rate, v.seat) { }
         public int Id { get; set; }
-        public decimal NumDistrictSeat { get; set; }
-        public decimal PropVoteRate { get; set; }
+        public decimal PartyVoteRate { get; set; }
+        public decimal DistrictSeat { get; set; }
 
         public override string ToString() => Pack();
 
-        public string Pack() => $"{Id}:{PropVoteRate}:{NumDistrictSeat}";
+        public string Pack() => $"{Id,2} {PartyVoteRate,5:N2} {DistrictSeat,3}";
         public static Vote Parse(string packed)
         {
-            var values = packed.Split(':').Select(x => decimal.Parse(x)).ToArray();
+            var values = packed.Split(' ').Select(x => decimal.Parse(x)).ToArray();
             return new Vote((int)values[0], values[1], values[2]);
         }
     }

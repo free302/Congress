@@ -18,12 +18,8 @@ namespace DrBAE.Congress.Common
         public Party((int id, string name) v) : this(v.id, v.name) { }
 
         public int Id { get; set; }
-        public string Name { get; set; } = "";
-        public decimal NumDistrictSeat { get; set; }//지역구 의석수
-        public decimal VoteRate { get; set; } = 0.0m;//선거 득표율
-        public bool CanHavePropSeat { get; set; }//비례의석 가능
-        public decimal PropVoteRate { get; set; } = 0.0m;//비례 득표율
-        public decimal NumPropSeat { get; set; }
+        public string Name { get; set; } = "";        
+        
         public bool CanHaveVoteRate { get; set; }//정당~무소속 구분
 
         /// <summary>

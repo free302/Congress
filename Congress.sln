@@ -5,17 +5,19 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{E0F9DA62-1DEA-49B9-8B1A-1CEE1D383B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{F3ECE954-7A3A-4EA1-A17A-59A6262047E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj", "{F3ECE954-7A3A-4EA1-A17A-59A6262047E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C0FE157A-2E01-4549-9138-E5A5D0BAC58A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{C0FE157A-2E01-4549-9138-E5A5D0BAC58A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Driver", "Driver\Driver.csproj", "{85653AB0-224F-4CD2-B6EE-93BD8E25C627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Driver", "Driver\Driver.csproj", "{85653AB0-224F-4CD2-B6EE-93BD8E25C627}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTester", "UTester\UTester.csproj", "{97659FE6-784A-4CF1-BCEF-119B46CA6111}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UTester", "UTester\UTester.csproj", "{97659FE6-784A-4CF1-BCEF-119B46CA6111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{2B85BFFE-80EE-479D-BB23-4557A9EDC209}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tester", "Tester\Tester.csproj", "{2B85BFFE-80EE-479D-BB23-4557A9EDC209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{C8B3C38F-F72A-4C8B-B445-60AA297A518F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{C8B3C38F-F72A-4C8B-B445-60AA297A518F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{92ED9305-DA7C-4081-A08D-EC0B8E5DB411}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{C8B3C38F-F72A-4C8B-B445-60AA297A518F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8B3C38F-F72A-4C8B-B445-60AA297A518F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8B3C38F-F72A-4C8B-B445-60AA297A518F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92ED9305-DA7C-4081-A08D-EC0B8E5DB411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92ED9305-DA7C-4081-A08D-EC0B8E5DB411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92ED9305-DA7C-4081-A08D-EC0B8E5DB411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92ED9305-DA7C-4081-A08D-EC0B8E5DB411}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

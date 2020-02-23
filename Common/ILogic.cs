@@ -6,5 +6,6 @@ namespace DrBAE.Congress.Common
 {
     interface ILogic
     {
+
     }
 }

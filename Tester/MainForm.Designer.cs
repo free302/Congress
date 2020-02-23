@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using System.Drawing;
 
 namespace DrBAE.Congress.Tester
 {
@@ -32,16 +33,43 @@ namespace DrBAE.Congress.Tester
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 800);
+            this.ClientSize = new System.Drawing.Size(900, 800);
             this.Text = "MainForm";
-            this.Font = new System.Drawing.Font("Noto Sans KR", 12);
+            this.Font = new System.Drawing.Font("Consolas", 12F);
 
-            Controls.Add(uiLog = new RichTextBox());
+            Controls.Add(uiStatus = new StatusBar());
+
+            Controls.Add(uiSplitMain = new SplitContainer());
+            this.uiSplitMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiSplitMain.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.uiSplitMain.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.uiSplitMain.SplitterDistance = 100;
+
+            uiSplitMain.Panel2.Controls.Add(uiSplitContent = new SplitContainer());
+            this.uiSplitContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiSplitContent.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.uiSplitContent.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.uiSplitContent.SplitterDistance = 400;
+
+            uiSplitContent.Panel1.Controls.Add(uiLog = new RichTextBox());
             uiLog.Dock = DockStyle.Fill;
-            uiLog.Font = new System.Drawing.Font("Consolas", 12);
+
+            uiSplitContent.Panel2.Controls.Add(uiGrid = new DataGridView());
+            uiGrid.Dock = DockStyle.Fill;
+            uiGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            uiGrid.ColumnHeadersVisible = true;
+            uiGrid.RowHeadersVisible = false;
+            uiGrid.RowTemplate.Height = 40;
+            uiGrid.Font = new Font("Noto Sans CJK KR (TTF)", 12, FontStyle.Regular);
+            uiGrid.AllowUserToAddRows = false;
         }
 
         RichTextBox uiLog;
+        SplitContainer uiSplitMain;
+        SplitContainer uiSplitContent;
+        DataGridView uiGrid;
+        StatusBar uiStatus;
+        
 
         #endregion
     }
